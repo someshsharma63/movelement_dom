@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move element</title>
+    <style>
+        #box
+        {
+            width: 200px;
+            height: 150px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+    </div><br>
+    <button id="btn">Start</button>
+</body>
+</html>
+<script>
+    let x=0
+    let button=document.getElementById("btn");
+    button.addEventListener('click',()=>
+    {
+        setInterval(()=>
+    {
+        if(x==400)
+    {
+        clearInterval()
+    }else
+    {
+        x=x+100;
+
+let box=document.getElementById("box");
+box.style.marginTop = x+"px";
+    }
+    },1000)
+
+    
+    })
+
+   
+</script>
